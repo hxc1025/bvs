@@ -28,38 +28,6 @@ function(x, y, m=NULL, v1.list=NULL, fold=10, a0=1, b0=1, iter.max=10^3, thres=1
     }
     
     p = ncol(x)
-    
-    # initial value
-    if(is.null(param.ini$alpha)){
-        alpha = 0
-    }else{
-        alpha = param.ini$alpha
-    }
-    if(any(is.null(param.ini$w.E))){
-        w.E = rep(0.25, n)
-    }else{
-        w.E = param.ini$w.E
-    }
-    if(any(is.null(param.ini$mu))){
-        mu = rep(0, p)
-    }else{
-        mu = param.ini$mu
-    }
-    if(is.null(param.ini$theta)){
-        theta = a0/(a0+b0)
-    }else{
-        theta = param.ini$theta
-    }
-    if(any(is.null(param.ini$phi))){
-        phi = rep(theta, p)
-    }else{
-        phi = param.ini$phi
-    }
-    if(any(is.null(param.ini$sigma2))){
-        sigma2 = rep(v1, p)
-    }else{
-        sigma2 = param.ini$sigma2
-    }
   
     ntest = floor(n/fold)
     ntrain = n - ntest 
