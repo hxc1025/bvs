@@ -8,5 +8,5 @@ function(n = 40, sigma2 = 3, beta = c(3, 1.5, 0, 0, 2, 0, 0, 0), rho = 0.5, Sigm
     x = rMVN(n, mu = rep(0,p), Sigma = Sigma)
     y = rnorm(n, x%*%beta, sigma2)
     
-    data.frame(x = x, y = y)
+    list(x = x, y = y)
 }
