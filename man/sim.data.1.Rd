@@ -32,7 +32,7 @@ Covariance matrix of the features.
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-A data frame containing:
+A list containing:
   \item{x}{Design matrix.}
   \item{y}{response variable.}
 }
