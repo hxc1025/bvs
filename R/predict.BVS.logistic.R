@@ -42,8 +42,8 @@ function(BVS, x.new, m.new = NULL, type = 1, phi.thres = 0.5){
     
     y.hat = ifelse(p.hat>0.5, 1, 0)
     
-    if(!is.null(m)){
-        y.hat = round(m*p.hat)
+    if(!is.null(m.new)){
+        y.hat = round(m.new*p.hat)
     }else{
         y.hat = ifelse(p.hat>0.5, 1, 0)
     }
